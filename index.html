@@ -1,41 +1,3278 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="https://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-<title>TestNG Report</title>
-<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMMM dd, yyyy, hh:mm a '('zzz')''/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/191775216e8ce53c38791eb07a1d2f31d0ae11b5/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>DMV Automation Test Report</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
 </head>
-<body>
-<table>
-<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">DMV Execution</th></tr>
-<tr><td><a href="#t0">DMV Cash Register Tests</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">3,756,577</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">DMV Cash Register Events</a></td><td class="num">12</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,000,198</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">21</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">9,756,775</th><th colspan="2"></th></tr>
-</table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">DMV Execution</th></tr></tbody><tbody id="t0"><tr><th colspan="4">DMV Cash Register Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest</td><td><a href="#m0">ClosingSessionCalculationsBalanceCalculationShouldMatch</a></td><td rowspan="1">1764495087104</td><td rowspan="1">299518</td></tr><tr class="passedeven"><td><a href="#m1">UnFreezedUserCashRegisterWhenItsFrozen</a></td><td rowspan="1">1764494436023</td><td rowspan="1">309503</td></tr><tr class="passedeven"><td><a href="#m2">closeCashRegisterforCashier</a></td><td rowspan="1">1764495386634</td><td rowspan="1">496638</td></tr><tr class="passedeven"><td><a href="#m3">newCustomerCreateFromHomePage</a></td><td rowspan="1">1764496947054</td><td rowspan="1">657126</td></tr><tr class="passedeven"><td><a href="#m4">openingCashRegisterforCashierWithoutError</a></td><td rowspan="1">1764494747016</td><td rowspan="1">340071</td></tr><tr class="passedeven"><td><a href="#m5">openingRegisterIfUserCashRegisterIsFrozen</a></td><td rowspan="1">1764495883284</td><td rowspan="1">306653</td></tr><tr class="passedeven"><td><a href="#m6">openingSessionCalculationsSessionOpensWithoutError</a></td><td rowspan="1">1764496189951</td><td rowspan="1">340018</td></tr><tr class="passedeven"><td><a href="#m7">validateCashDenominationOnRegisterWithCoins</a></td><td rowspan="1">1764496529988</td><td rowspan="1">414944</td></tr><tr class="passedeven"><td><a href="#m8">verifyRefundAndReturnForUserLocation</a></td><td rowspan="1">1764497604211</td><td rowspan="1">586138</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">DMV Cash Register Events &#8212; passed</th></tr><tr class="passedeven"><td rowspan="12">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest</td><td><a href="#m9">addNewTerminalRecordForCashRegister</a></td><td rowspan="1">1764498190486</td><td rowspan="1">485113</td></tr><tr class="passedeven"><td><a href="#m10">createCashRegisterEventCashIn</a></td><td rowspan="1">1764498675609</td><td rowspan="1">383895</td></tr><tr class="passedeven"><td><a href="#m11">createCashRegisterEventCashout</a></td><td rowspan="1">1764499059512</td><td rowspan="1">384234</td></tr><tr class="passedeven"><td><a href="#m12">findCashRegisterEventCashIn</a></td><td rowspan="1">1764499455120</td><td rowspan="1">1585564</td></tr><tr class="passedeven"><td><a href="#m13">findCashRegisterEventCashOut</a></td><td rowspan="1">1764501043050</td><td rowspan="1">1583046</td></tr><tr class="passedeven"><td><a href="#m14">gettingCashierUserIDFromUserDetails</a></td><td rowspan="1">1764499445908</td><td rowspan="1">4656</td></tr><tr class="passedeven"><td><a href="#m15">gettingUserEmployeeIDFromUserDetails</a></td><td rowspan="1">1764499450574</td><td rowspan="1">4534</td></tr><tr class="passedeven"><td><a href="#m16">validateCashRegisterEventCashIn</a></td><td rowspan="1">1764503101443</td><td rowspan="1">545994</td></tr><tr class="passedeven"><td><a href="#m17">validateCashRegisterEventCashOut</a></td><td rowspan="1">1764503647449</td><td rowspan="1">543153</td></tr><tr class="passedeven"><td><a href="#m18">validateCashRegisterLastTerminal</a></td><td rowspan="1">1764502626107</td><td rowspan="1">466049</td></tr><tr class="passedeven"><td><a href="#m19">validateUserCashierIDOnCashRegister</a></td><td rowspan="1">1764503092165</td><td rowspan="1">4667</td></tr><tr class="passedeven"><td><a href="#m20">validateUserEmployeeIDOnCashRegister</a></td><td rowspan="1">1764503096848</td><td rowspan="1">4586</td></tr></tbody>
-</table>
-<h2>DMV Cash Register Tests</h2><h3 id="m0">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest#ClosingSessionCalculationsBalanceCalculationShouldMatch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest#UnFreezedUserCashRegisterWhenItsFrozen</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest#closeCashRegisterforCashier</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest#newCustomerCreateFromHomePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest#openingCashRegisterforCashierWithoutError</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest#openingRegisterIfUserCashRegisterIsFrozen</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest#openingSessionCalculationsSessionOpensWithoutError</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest#validateCashDenominationOnRegisterWithCoins</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.dmv.test.website.Pos.CCPackageTests.CashRegisterTest#verifyRefundAndReturnForUserLocation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>DMV Cash Register Events</h2><h3 id="m9">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#addNewTerminalRecordForCashRegister</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#createCashRegisterEventCashIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#createCashRegisterEventCashout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#findCashRegisterEventCashIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#findCashRegisterEventCashOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#gettingCashierUserIDFromUserDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#gettingUserEmployeeIDFromUserDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#validateCashRegisterEventCashIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#validateCashRegisterEventCashOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#validateCashRegisterLastTerminal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m19">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#validateUserCashierIDOnCashRegister</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m20">com.dmv.test.website.Pos.CCPackageTests.CashRegisterEventsTest#validateUserEmployeeIDOnCashRegister</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-</body>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>DMV Automation Test Report</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>November 30, 2025, 02:50 PM (IST)</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box' style="max-height:94px;">
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>21</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="timeline-chart" class="row nm-v nm-h">
+		<div class="col s12 m12 l12 np-h">
+			<div class="card-panel">
+				<div class='left panel-name'>Timeline (seconds)</div>
+				<div class="chart-box" style="width:98%;max-height:145px;">
+					<canvas id="timeline" height="120"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>UnFreezedUserCashRegisterWhenItsFrozen</span>
+						<span class='test-time'>November 30, 2025, 02:50 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 02:50 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 02:50 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+-1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:50:48 PM</td>
+				<td class='step-details'>
+						entered Login user name : prakulkumar323@eposly.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:50:48 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:50:48 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : HVACZOGKIF22GWMKIAHCDG4VDUF6KGSG
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:52:02 PM</td>
+				<td class='step-details'>
+						Fetching verification code from email of user:
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:52:02 PM</td>
+				<td class='step-details'>
+						trying to fetch verification code from user's email : prakulkumar323@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:52:13 PM</td>
+				<td class='step-details'>
+						Success: verification code from user's email : prakulkumar323@eposly.dmv found as: 113555
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:52:13 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 113555
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:55:13 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:55:33 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:55:33 PM</td>
+				<td class='step-details'>
+						defaultUserLocation in properties found : DMV Test
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:55:43 PM</td>
+				<td class='step-details'>
+						DMV Test is not frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:55:45 PM</td>
+				<td class='step-details'>
+						Test Completed :UnFreezedUserCashRegisterWhenItsFrozen
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>openingCashRegisterforCashierWithoutError</span>
+						<span class='test-time'>November 30, 2025, 02:55 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 02:55 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 02:55 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:55:50 PM</td>
+				<td class='step-details'>
+						Test opening of closed cash register
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:55:58 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:55:58 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:55:58 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:57:34 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:57:34 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 988944
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:00:33 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:00:53 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:00:54 PM</td>
+				<td class='step-details'>
+						assertion Passed: expected session closed before opening session
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:01:25 PM</td>
+				<td class='step-details'>
+						assertion Passed: expected session should open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:01:25 PM</td>
+				<td class='step-details'>
+						success: opened cash register
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:01:25 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0051
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:01:25 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected cash register session id allocated after opening new session
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:01:27 PM</td>
+				<td class='step-details'>
+						Test Completed :openingCashRegisterforCashierWithoutError
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>ClosingSessionCalculationsBalanceCalculationShouldMatch</span>
+						<span class='test-time'>November 30, 2025, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 03:01 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+-1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:01:37 PM</td>
+				<td class='step-details'>
+						entered Login user name : prakulkumar323@eposly.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:01:37 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:01:37 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : HVACZOGKIF22GWMKIAHCDG4VDUF6KGSG
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:02:53 PM</td>
+				<td class='step-details'>
+						Fetching verification code from email of user:
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:02:53 PM</td>
+				<td class='step-details'>
+						trying to fetch verification code from user's email : prakulkumar323@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:03:05 PM</td>
+				<td class='step-details'>
+						Success: verification code from user's email : prakulkumar323@eposly.dmv found as: 482408
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:03:05 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 482408
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:06:04 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:06:25 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:06:25 PM</td>
+				<td class='step-details'>
+						Session is already closed
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:06:26 PM</td>
+				<td class='step-details'>
+						Test Completed :ClosingSessionCalculationsBalanceCalculationShouldMatch
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>closeCashRegisterforCashier</span>
+						<span class='test-time'>November 30, 2025, 03:06 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 03:06 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 03:06 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:06:38 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:06:38 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:06:38 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:08:14 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:08:14 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 127821
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:11:15 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:11:35 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:11:55 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:12:15 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:12:35 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:12:55 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0051
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:12:56 PM</td>
+				<td class='step-details'>
+						current total amount of register session is : US$321,071.18
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:12:56 PM</td>
+				<td class='step-details'>
+						success to fetch current total amount of register sessionUS$321,071.18
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:12:56 PM</td>
+				<td class='step-details'>
+						trying to close session from cash register
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:12:56 PM</td>
+				<td class='step-details'>
+						trying to verify Invalid Input for closing cash registers
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:13:11 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected invalid numberic value error with invalid values
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:13:11 PM</td>
+				<td class='step-details'>
+						Total type of amount button found to close session : 7
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:13:20 PM</td>
+				<td class='step-details'>
+						Total type of amount button found to close session : 7
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:13:41 PM</td>
+				<td class='step-details'>
+						Verifying amountRequiredErrorMsg for other Amount inputs
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:14:21 PM</td>
+				<td class='step-details'>
+						added closing session amounts
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:14:41 PM</td>
+				<td class='step-details'>
+						success: closed Session
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:14:41 PM</td>
+				<td class='step-details'>
+						assertion Passed: expected session closed and session opening button should be visible
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:14:43 PM</td>
+				<td class='step-details'>
+						Test Completed :closeCashRegisterforCashier
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>openingRegisterIfUserCashRegisterIsFrozen</span>
+						<span class='test-time'>November 30, 2025, 03:14 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 03:14 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 03:14 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:14:53 PM</td>
+				<td class='step-details'>
+						entered Login user name : prakulkumar323@eposly.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:14:53 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:14:53 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : HVACZOGKIF22GWMKIAHCDG4VDUF6KGSG
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:16:08 PM</td>
+				<td class='step-details'>
+						Fetching verification code from email of user:
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:16:08 PM</td>
+				<td class='step-details'>
+						trying to fetch verification code from user's email : prakulkumar323@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:16:18 PM</td>
+				<td class='step-details'>
+						Success: verification code from user's email : prakulkumar323@eposly.dmv found as: 480546
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:16:18 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 480546
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:19:18 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:19:38 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:19:38 PM</td>
+				<td class='step-details'>
+						defaultUserLocation in properties found : DMV Test
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:19:48 PM</td>
+				<td class='step-details'>
+						DMV Test is not frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:19:49 PM</td>
+				<td class='step-details'>
+						Test Completed :openingRegisterIfUserCashRegisterIsFrozen
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>openingSessionCalculationsSessionOpensWithoutError</span>
+						<span class='test-time'>November 30, 2025, 03:19 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 03:19 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 03:19 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:19:53 PM</td>
+				<td class='step-details'>
+						Test opening of closed cash register
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:20:00 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:20:00 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:20:00 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:21:36 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:21:36 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 823022
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:24:36 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:24:56 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:24:56 PM</td>
+				<td class='step-details'>
+						assertion Passed: expected session closed before opening session
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:25:28 PM</td>
+				<td class='step-details'>
+						assertion Passed: expected session should open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:25:28 PM</td>
+				<td class='step-details'>
+						success: opened cash register
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:25:28 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:25:28 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected cash register session id allocated after opening new session
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:25:29 PM</td>
+				<td class='step-details'>
+						Test Completed :openingSessionCalculationsSessionOpensWithoutError
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>validateCashDenominationOnRegisterWithCoins</span>
+						<span class='test-time'>November 30, 2025, 03:25 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 03:25 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 03:25 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:25:33 PM</td>
+				<td class='step-details'>
+						Testing CashDenomination On Cash Register WithCoins
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:26:01 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:26:01 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:26:01 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:27:35 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:27:35 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 737925
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:30:35 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:30:55 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:31:15 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:31:35 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:31:56 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:32:07 PM</td>
+				<td class='step-details'>
+						Validation success: denomination is disabled for this organization
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:32:23 PM</td>
+				<td class='step-details'>
+						assertion Passed:Denomination calculation should match
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:32:23 PM</td>
+				<td class='step-details'>
+						assertion Passed:Denomination- if Coins has value, than other input reset to 0
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:32:24 PM</td>
+				<td class='step-details'>
+						Test Completed :validateCashDenominationOnRegisterWithCoins
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>newCustomerCreateFromHomePage</span>
+						<span class='test-time'>November 30, 2025, 03:32 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 03:32 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 03:32 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:32:38 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:32:38 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:32:38 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:34:14 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:34:14 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 167779
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:37:14 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:37:34 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:37:54 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:38:15 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:38:35 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:38:35 PM</td>
+				<td class='step-details'>
+						Loading Url : https://eposly-dmv-test.lightning.force.com/lightning/setup/SetupOneHome/home
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:38:46 PM</td>
+				<td class='step-details'>
+						updating CehSetting : Customer Detail Search First  to Y
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:38:48 PM</td>
+				<td class='step-details'>
+						opening settings: Custom Settings
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:39:20 PM</td>
+				<td class='step-details'>
+						clicking manage ceh setting button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:39:39 PM</td>
+				<td class='step-details'>
+						Success: updated CehSetting : Customer Detail Search First  to Y
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:39:39 PM</td>
+				<td class='step-details'>
+						updated CustomerDetailSearchFirst in ceh settings to Y
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:41:57 PM</td>
+				<td class='step-details'>
+						finding new Order Button at home page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:41:58 PM</td>
+				<td class='step-details'>
+						clicked newOrderButton
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:41:58 PM</td>
+				<td class='step-details'>
+						User clicked on Create New Order
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:41:59 PM</td>
+				<td class='step-details'>
+						adding new customer detail
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:42:09 PM</td>
+				<td class='step-details'>
+						deselected marketing communication for customer
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:42:24 PM</td>
+				<td class='step-details'>
+						clicked new customer continue btn
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:42:24 PM</td>
+				<td class='step-details'>
+						added new customer details in form : autoCustomersIzGdyYy ParMteqc
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:43:15 PM</td>
+				<td class='step-details'>
+						Success saved order:DMV000017
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:43:18 PM</td>
+				<td class='step-details'>
+						product added to order : DMVTestShirt
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:43:20 PM</td>
+				<td class='step-details'>
+						Success saved order:DMV000017
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:43:22 PM</td>
+				<td class='step-details'>
+						addProductForOrder : DMVTestShirt
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:43:22 PM</td>
+				<td class='step-details'>
+						success: added ProductForOrder : DMVTestShirt
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:43:24 PM</td>
+				<td class='step-details'>
+						Test Completed :newCustomerCreateFromHomePage
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyRefundAndReturnForUserLocation</span>
+						<span class='test-time'>November 30, 2025, 03:43 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 03:43 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 03:43 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:43:34 PM</td>
+				<td class='step-details'>
+						entered Login user name : prakulkumar323@eposly.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:43:34 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:43:34 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : HVACZOGKIF22GWMKIAHCDG4VDUF6KGSG
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:44:49 PM</td>
+				<td class='step-details'>
+						Fetching verification code from email of user:
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:44:49 PM</td>
+				<td class='step-details'>
+						trying to fetch verification code from user's email : prakulkumar323@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:44:59 PM</td>
+				<td class='step-details'>
+						Success: verification code from user's email : prakulkumar323@eposly.dmv found as: 993563
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:44:59 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 993563
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:58 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:19 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:19 PM</td>
+				<td class='step-details'>
+						verifying return and refund option from user location
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:34 PM</td>
+				<td class='step-details'>
+						finding new Order Button at home page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:35 PM</td>
+				<td class='step-details'>
+						clicked newOrderButton
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:10 PM</td>
+				<td class='step-details'>
+						Test Completed :verifyRefundAndReturnForUserLocation
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>addNewTerminalRecordForCashRegister</span>
+						<span class='test-time'>November 30, 2025, 03:53 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 03:53 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 03:53 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:40 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:40 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:40 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:55:15 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:55:15 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 736049
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:58:14 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:58:34 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:58:54 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:59:14 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:59:34 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:59:34 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:12 PM</td>
+				<td class='step-details'>
+						loaded cash register page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:13 PM</td>
+				<td class='step-details'>
+						checking if last used terminal for cash register configured or not
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:14 PM</td>
+				<td class='step-details'>
+						last used terminal record already exists
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:14 PM</td>
+				<td class='step-details'>
+						last used terminal already exists :  no need to add again
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:15 PM</td>
+				<td class='step-details'>
+						Test Completed :addNewTerminalRecordForCashRegister
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>createCashRegisterEventCashIn</span>
+						<span class='test-time'>November 30, 2025, 04:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 04:01 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 04:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:26 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:26 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:26 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:03:00 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:03:00 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 467345
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:06:01 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:06:21 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:06:41 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:01 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:21 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:21 PM</td>
+				<td class='step-details'>
+						Testing creation of CashRegisterEvent On Cash Register CashIn
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:21 PM</td>
+				<td class='step-details'>
+						creating cash register event type : CASH-IN
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:24 PM</td>
+				<td class='step-details'>
+						adding cash register event amount : 9687.35
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:24 PM</td>
+				<td class='step-details'>
+						selecting cash register event payment mode : CASH
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:26 PM</td>
+				<td class='step-details'>
+						CashRegister Event created
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:39 PM</td>
+				<td class='step-details'>
+						Test Completed :createCashRegisterEventCashIn
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>createCashRegisterEventCashout</span>
+						<span class='test-time'>November 30, 2025, 04:07 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 04:07 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 04:07 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:51 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:51 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:07:51 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:09:24 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:09:24 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 576181
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:12:26 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:12:46 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:13:06 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:13:26 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:13:46 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:13:46 PM</td>
+				<td class='step-details'>
+						Testing creation of CashRegisterEvent On Cash Register CashIn
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:13:46 PM</td>
+				<td class='step-details'>
+						creating cash register event type : CASH-OUT
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:13:48 PM</td>
+				<td class='step-details'>
+						adding cash register event amount : 352499.82
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:13:49 PM</td>
+				<td class='step-details'>
+						selecting cash register event payment mode : CASH
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:13:51 PM</td>
+				<td class='step-details'>
+						CashRegister Event created
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:14:03 PM</td>
+				<td class='step-details'>
+						Test Completed :createCashRegisterEventCashout
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>gettingCashierUserIDFromUserDetails</span>
+						<span class='test-time'>November 30, 2025, 04:14 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 04:14 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 04:14 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:14:09 PM</td>
+				<td class='step-details'>
+						testTo verify user cashierId IS disabled from properties
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:14:10 PM</td>
+				<td class='step-details'>
+						Test Completed :gettingCashierUserIDFromUserDetails
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>gettingUserEmployeeIDFromUserDetails</span>
+						<span class='test-time'>November 30, 2025, 04:14 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 04:14 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 04:14 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:14:14 PM</td>
+				<td class='step-details'>
+						test To verify EmployeeId IS disabled from properties
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:14:15 PM</td>
+				<td class='step-details'>
+						Test Completed :gettingUserEmployeeIDFromUserDetails
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>findCashRegisterEventCashIn</span>
+						<span class='test-time'>November 30, 2025, 04:14 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 04:14 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 04:14 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:14:26 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:14:26 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:14:26 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:16:01 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:16:01 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 849020
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:19:02 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:19:22 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:19:42 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:20:02 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:20:22 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:20:22 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:20:22 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:22:00 PM</td>
+				<td class='step-details'>
+						defaultCashRegisterName : Test-001
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:22:00 PM</td>
+				<td class='step-details'>
+						loaded cash register page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:22:02 PM</td>
+				<td class='step-details'>
+						opening details of currentSessionId: CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:22:06 PM</td>
+				<td class='step-details'>
+						success : opened details of currentSessionId: CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:39:13 PM</td>
+				<td class='step-details'>
+						finding cash register event type : CASH-IN of amount:9,687.35 with payment:CASH
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:40:39 PM</td>
+				<td class='step-details'>
+						able to find cash register event with ID : CRE-0379
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:40:39 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected RunTimeConstants.cashInTransactionEventId should not be empty
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:40:42 PM</td>
+				<td class='step-details'>
+						Test Completed :findCashRegisterEventCashIn
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>findCashRegisterEventCashOut</span>
+						<span class='test-time'>November 30, 2025, 04:40 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 04:40 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 04:40 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:40:55 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:40:55 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:40:55 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:42:30 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:42:30 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 277802
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:45:30 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:45:50 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:46:10 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:46:30 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:46:50 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:46:50 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:46:50 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:48:28 PM</td>
+				<td class='step-details'>
+						defaultCashRegisterName : Test-001
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:48:28 PM</td>
+				<td class='step-details'>
+						loaded cash register page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:48:30 PM</td>
+				<td class='step-details'>
+						opening details of currentSessionId: CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:48:32 PM</td>
+				<td class='step-details'>
+						success : opened details of currentSessionId: CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:05:39 PM</td>
+				<td class='step-details'>
+						finding cash register event type : CASH-OUT of amount:352,499.82 with payment:CASH
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:07:04 PM</td>
+				<td class='step-details'>
+						able to find cash register event with ID : CRE-0380
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:07:04 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected RunTimeConstants.cashOutTransactionEventId should not be empty
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:07:06 PM</td>
+				<td class='step-details'>
+						Test Completed :findCashRegisterEventCashOut
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>validateCashRegisterLastTerminal</span>
+						<span class='test-time'>November 30, 2025, 05:07 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 05:07 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 05:07 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+-1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:07:18 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:07:18 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:07:18 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:08:52 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:08:52 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 606321
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:11:51 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:12:11 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:12:31 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:12:51 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:13:11 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:13:11 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:14:49 PM</td>
+				<td class='step-details'>
+						defaultCashRegisterName : Test-001
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:14:49 PM</td>
+				<td class='step-details'>
+						loaded cash register page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:14:50 PM</td>
+				<td class='step-details'>
+						checking if last used terminal for cash register configured or not
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:14:50 PM</td>
+				<td class='step-details'>
+						last used terminal record already exists
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:14:50 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected cash register last used terminal should exists
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:14:52 PM</td>
+				<td class='step-details'>
+						Test Completed :validateCashRegisterLastTerminal
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>validateUserCashierIDOnCashRegister</span>
+						<span class='test-time'>November 30, 2025, 05:14 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 05:14 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 05:14 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:14:55 PM</td>
+				<td class='step-details'>
+						testTo verify user cashierId IS disabled from properties
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:14:56 PM</td>
+				<td class='step-details'>
+						Test Completed :validateUserCashierIDOnCashRegister
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>validateUserEmployeeIDOnCashRegister</span>
+						<span class='test-time'>November 30, 2025, 05:15 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 05:15 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 05:15 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:15:00 PM</td>
+				<td class='step-details'>
+						test To verify EmployeeId IS disabled from properties
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:15:01 PM</td>
+				<td class='step-details'>
+						Test Completed :validateUserEmployeeIDOnCashRegister
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>validateCashRegisterEventCashIn</span>
+						<span class='test-time'>November 30, 2025, 05:15 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 05:15 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 05:15 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:15:13 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:15:13 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:15:13 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:16:48 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:16:48 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 227343
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:19:49 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:20:09 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:20:29 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:20:49 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:21:09 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:21:09 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:47 PM</td>
+				<td class='step-details'>
+						defaultCashRegisterName : Test-001
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:47 PM</td>
+				<td class='step-details'>
+						loaded cash register page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:49 PM</td>
+				<td class='step-details'>
+						opening details of currentSessionId: CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:51 PM</td>
+				<td class='step-details'>
+						success : opened details of currentSessionId: CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:51 PM</td>
+				<td class='step-details'>
+						opening cash register details with eventID :  CRE-0379
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:52 PM</td>
+				<td class='step-details'>
+						success cash register event details found with eventID :  CRE-0379
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:54 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected AmountTotal should be : 9687.35 but was : 9687.35
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:23:18 PM</td>
+				<td class='step-details'>
+						cash register event validation model opened
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:23:18 PM</td>
+				<td class='step-details'>
+						trying to validate if cancel Button Working For ValidateEvent Model
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:23:40 PM</td>
+				<td class='step-details'>
+						assertion Passed: Expected validation model close after clicking on cancel button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:01 PM</td>
+				<td class='step-details'>
+						cash register event validation model opened
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:01 PM</td>
+				<td class='step-details'>
+						success: opened cash register event validation model
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:04 PM</td>
+				<td class='step-details'>
+						selecting Validation status : Complete
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:05 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected validateSuccessCashRegisterEventMssg : By.xpath: //*[contains(text(),'Cash Register Event Record Updated')][1]
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:07 PM</td>
+				<td class='step-details'>
+						Test Completed :validateCashRegisterEventCashIn
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>validateCashRegisterEventCashOut</span>
+						<span class='test-time'>November 30, 2025, 05:24 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>November 30, 2025, 05:24 PM (IST)</span>
+	<span class='label end-time'>November 30, 2025, 05:24 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:19 PM</td>
+				<td class='step-details'>
+						entered Login user name : tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:19 PM</td>
+				<td class='step-details'>
+						entered Login password : EPOSdmv25
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:19 PM</td>
+				<td class='step-details'>
+						entered Login sfToken : IPIV55GR5VX5DTECJ4O7UD5W6VEGH7QL
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:25:53 PM</td>
+				<td class='step-details'>
+						found verification screen for code
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:25:53 PM</td>
+				<td class='step-details'>
+						Generated TOTP Code: 998311
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:53 PM</td>
+				<td class='step-details'>
+						verifying if user is frozen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:13 PM</td>
+				<td class='step-details'>
+						verifying if session is open
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:33 PM</td>
+				<td class='step-details'>
+						verifying if epc required configured for system
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:53 PM</td>
+				<td class='step-details'>
+						verifying if cash register is already registered for user:tu1@epos.dmv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:30:13 PM</td>
+				<td class='step-details'>
+						Login successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:30:13 PM</td>
+				<td class='step-details'>
+						current cash register session ID : CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:51 PM</td>
+				<td class='step-details'>
+						defaultCashRegisterName : Test-001
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:51 PM</td>
+				<td class='step-details'>
+						loaded cash register page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:53 PM</td>
+				<td class='step-details'>
+						opening details of currentSessionId: CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:55 PM</td>
+				<td class='step-details'>
+						success : opened details of currentSessionId: CRP-0052
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:55 PM</td>
+				<td class='step-details'>
+						opening cash register details with eventID :  CRE-0380
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:57 PM</td>
+				<td class='step-details'>
+						success cash register event details found with eventID :  CRE-0380
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:58 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected AmountTotal should be : 352499.82 but was : 352499.82
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:22 PM</td>
+				<td class='step-details'>
+						cash register event validation model opened
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:22 PM</td>
+				<td class='step-details'>
+						trying to validate if cancel Button Working For ValidateEvent Model
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:43 PM</td>
+				<td class='step-details'>
+						assertion Passed: Expected validation model close after clicking on cancel button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:05 PM</td>
+				<td class='step-details'>
+						cash register event validation model opened
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:05 PM</td>
+				<td class='step-details'>
+						success: opened cash register event validation model
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:07 PM</td>
+				<td class='step-details'>
+						selecting Validation status : Complete
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:09 PM</td>
+				<td class='step-details'>
+						assertion Passed:Expected validateSuccessCashRegisterEventMssg : By.xpath: //*[contains(text(),'Cash Register Event Record Updated')][1]
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:10 PM</td>
+				<td class='step-details'>
+						Test Completed :validateCashRegisterEventCashOut
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>21</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>November 30, 2025, 02:50 PM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>November 30, 2025, 02:50 PM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 0s+0ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS</td>
+								<td>win</td>
+							</tr>
+							<tr>
+								<td>Tester</td>
+								<td>DMV Test Automation Framework</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+				passParent: 21,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "UnFreezedUserCashRegisterWhenItsFrozen":-0.001,"openingCashRegisterforCashierWithoutError":0,"ClosingSessionCalculationsBalanceCalculationShouldMatch":-0.001,"closeCashRegisterforCashier":0,"openingRegisterIfUserCashRegisterIsFrozen":0,"openingSessionCalculationsSessionOpensWithoutError":0,"validateCashDenominationOnRegisterWithCoins":0,"newCustomerCreateFromHomePage":0,"verifyRefundAndReturnForUserLocation":0,"addNewTerminalRecordForCashRegister":0,"createCashRegisterEventCashIn":0,"createCashRegisterEventCashout":0,"gettingCashierUserIDFromUserDetails":0,"gettingUserEmployeeIDFromUserDetails":0,"findCashRegisterEventCashIn":0,"findCashRegisterEventCashOut":0,"validateCashRegisterLastTerminal":-0.001,"validateUserCashierIDOnCashRegister":0,"validateUserEmployeeIDOnCashRegister":0,"validateCashRegisterEventCashIn":0,"validateCashRegisterEventCashOut":0
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/master/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
 </html>
